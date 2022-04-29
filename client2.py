@@ -33,31 +33,33 @@ import dsmlib
 
 # dsmlib.script_end()
 
+dsmlib.write("B", 200)
+
+A = dsmlib.read("A")
+B = 200
+C = dsmlib.read("C")
+print("sum=",A+B+C)
+
+# dsmlib.checkloop()
+
+A = A + 30
+
+dsmlib.write("A",A)
+
+A = dsmlib.read("A")
+B = dsmlib.read("B")
+C = dsmlib.read("C")
+print("sum=",A+B+C)
+# dsmlib.checkloop()
 
 
+A = A - 100
+dsmlib.write("A",A)
 
-dsmlib.write("A", 25)
-
-dsmlib.checkloop()
-
-print(dsmlib.read("A"))
-
-dsmlib.checkloop()
-
-print(dsmlib.read("A"))
-
-dsmlib.checkloop()
-
-dsmlib.write("A",100)
-
-dsmlib.checkloop()
-
-print(dsmlib.read("A"))
-
-dsmlib.checkloop()
-
-print(dsmlib.read("A"))
-
-dsmlib.checkloop()
+A = dsmlib.read("A")
+B = dsmlib.read("B")
+C = dsmlib.read("C")
+print("sum=",A+B+C)
+# dsmlib.checkloop()
 
 dsmlib.script_end()
